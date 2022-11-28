@@ -34,15 +34,15 @@ node;
 node * start = NULL, * newnode, * ptr;
 
 void ins_beg() {
-    newnode = (node * ) malloc(sizeof(node * ));
-    printf("\nEnter Data:\t ");
-    scanf("%d", & newnode -> data);
-    if (start == NULL) {
+    newnode = (node * ) malloc(sizeof(node * )); //a blank new node has been cr.
+    printf("\nEnter Data:\t "); //user-sp data
+    scanf("%d", & newnode -> data); //ent-data
+    if (start == NULL) { //list doesn't exist
         start = newnode;
         newnode -> next = NULL;
     } else {
-        newnode -> next = start;
-        start = newnode;
+        newnode -> next = start; //
+        start = newnode; 
     }
 }
 void ins_end() {
@@ -59,7 +59,8 @@ void ins_end() {
         printf("\nEnter Data:\t");
         scanf("%d", & newnode -> data);
     }
- }
+}
+
 void ins_any() {
     node *leftptr;
     ptr = start;
